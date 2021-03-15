@@ -20,9 +20,13 @@ include'includes/footer.php';
 
 	<!-- laad hier via php de juiste contentpagina in (vanuit de pages map) in. Welke geselecteerd moet worden kun je uit de URL halen (URL_Params).-->
   <?php 
- if (!empty($_GET)) {
-  include_once($_GET['content']);
-}  ?>
+ if (empty($_GET)) {
+  include_once'pages/onderwerp1.php';
+
+}   else{
+         include_once($_GET['content']);
+     }
+ ?>
 	
 	<!-- laad hier via php je footer in (vanuit je includes map)-->
   <?php
